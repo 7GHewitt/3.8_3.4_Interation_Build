@@ -1,0 +1,268 @@
+body{
+background-image: url("../images/background.jpg");
+background-repeat: no-repeat;
+background-color: blue;
+background-blend-mode: Soft Light;
+}
+.background{
+background-position: center;
+
+background-size: cover;
+background-attachment: fixed;
+height: 100%;
+}
+
+.container {
+display: grid;
+grid-template-colums: 200px auto;
+grid-template-rows: 120px 80px 500px 80px;
+height: 100vh;
+}
+
+.header {
+box-sizing: border-box;
+background-color: ;
+grid-colums-start: 1;
+grid-column-end:span 2;
+background-color: rgba(0,0,0, 0.6);
+}
+
+.nav {
+box-sizing: border-box;
+background-color: ;
+grid-colums-start: 1;
+grid-column-end:span 2;
+text-align:left;
+background-color: rgba(0,0,0, 0.6);
+}
+
+/*This is used for when you interact with the nav links*/
+a:link {color:#FFFFFF;} /* unvisited link */
+a:visited {color:#FFFFFF;}  /*visited link */
+a:hover {color:#1c1a54;}  /*mouse over link */
+a:active {color:#FFFFFF;}   /*selected link */
+
+ul {
+  display: inline;
+  padding: 15px 0px 0px 0px;
+}
+
+ul li {
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/*This is the background of the nav*/
+ul li {
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  padding: 15px 50px 17px;
+  background-color: #6495ed;
+}
+
+/*This is the main structure for the nav placing it where it currently is*/
+ul li ul {
+  padding: 0;
+  position: absolute;
+  left: 0;
+  width: 180px;
+  display: none;
+}
+
+/* This code is for the drop down*/
+ul li ul li {
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: bold;
+  background: #ebdc66;
+  display: block;
+  text-align: left;
+}
+
+ul li:hover{
+  background: #ebdc66;
+}
+
+ul li ul li:hover{background: #ebdc66;}
+
+ul li:hover ul{
+  display: block;
+}
+
+.section{
+background-color: rgba(211,211,211, 0.6);
+box-sizing: border-box;
+grid-colums-start: 1;
+grid-column-end:span 2;
+grid-rows-start: 1;
+grid-rows-end:span 2;
+margin: 70px;
+height: 100%;
+}
+
+img{
+max-width: 50%;
+max-height: 50vh;
+margin: 10px;
+}
+
+/* Style the Image Used to Trigger the Modal */
+#myImg{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover{opacity: 0.7;}
+
+/* The Modal (background) */
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption{
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption{
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom{
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close{
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus{
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content{
+    width: 100%;
+}
+}
+
+h2{
+padding: 10px;
+font-weight:bold;
+font-style:italic;
+font-family: 'Open Sans', sans-serif;
+padding-top: 10px;
+}
+
+p {
+font-family: impact;
+font-size: 20px;
+padding: 10px;
+}
+
+.footer{
+box-sizing: border-box;
+background-color: #C8A2C8;
+grid-colums-start: 1;
+grid-column-end:span 2;
+margin: 70px;
+height:80%;
+}
+
+#thumbnails img{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 0px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 6px rgba(0,0,0,0.3);
+	-moz-box-shadow: 5px 5px 6px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 5px 5px 6px rgba(0,0,0,0.3);
+}
+
+#thumbnails a{
+	display: inline-block;
+	background-color: rgb(235,248,200);
+}
+
+
+div.gallery{
+	margin: 5px;
+	border: 1px solid # ccc;
+	float: left;
+	width: 180px;
+}
+div.gallery:hover{
+	border: 1px solid #777;
+}
+
+div.gallery img{
+	width: 100%;
+	height: auto;
+}
+
+div.desc {
+	padding: 15px;
+	text-align: center;
+}
+
+.textwrap1{
+	float: left;
+	-webkit-shape-outside: circle();
+	-webkit-shape-margin: 40px;
+	max-width: 350px;
+	width: 20%;
+	opacity
+}
+
+.textwrap1:hover{
+opacity: 0.7;
+}
+	
